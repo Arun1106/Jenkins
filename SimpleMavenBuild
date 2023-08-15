@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    tools {
+        maven "mvn"
+    }
+    stages {
+        stage('git') {
+            steps {
+                git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
+            }
+        }
+        stage('test') {
+            steps{
+                sh 'mvn -B -ntp -Dmaven.test.failure.ignore verify'
+            }
+            
+        }
+    }
+}
