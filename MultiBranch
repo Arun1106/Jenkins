@@ -4,17 +4,17 @@ pipeline {
         stage('Checkout') {
         stage('Build') {
             steps {
-                sh 'hi'
+                sh 'hi test'
             }
         }
         stage('Test') {
             steps {
-                sh 'hi'
+                sh 'hi test'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'hi'
+                sh 'hi test'
             }
         }
     }
